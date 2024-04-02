@@ -9,13 +9,14 @@ public class Area {
         double r = 0.0;
 
         while (invalidInput) {
-            System.out.println("Enter a radius: ");
+            System.out.print("Enter a radius: ");
 
             if (input.hasNextInt() || input.hasNextDouble()) {
                 r = Math.abs(input.nextDouble());
                 invalidInput = false;
             } else {
-                System.out.println("Sorry, invalid input. Please try again.");
+                String stringValue = input.next();
+                System.out.println("Sorry, your input " + stringValue + " is invalid. Please try again.");
             }
         }
 
