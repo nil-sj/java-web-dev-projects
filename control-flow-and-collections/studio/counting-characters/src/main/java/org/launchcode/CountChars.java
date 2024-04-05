@@ -21,10 +21,11 @@ public class CountChars {
 
         for (char c : charactersInString) {
             if(Character.isLetter(c)) {
-                if (myCharMap.containsKey(Character.toUpperCase(c))) {
-                    myCharMap.put(Character.toUpperCase(c), myCharMap.get(Character.toUpperCase(c))+1);
+                c = Character.toUpperCase(c);
+                if (myCharMap.containsKey(c)) {
+                    myCharMap.put(c, myCharMap.get(c)+1);
                 } else {
-                    myCharMap.put(Character.toUpperCase(c), 1);
+                    myCharMap.put(c, 1);
                 }
             }
         }
