@@ -13,6 +13,7 @@ public class CountChars {
         System.out.println("Enter some text phrase [or press enter for default text]");
         myText = input.nextLine();
         input.close();
+
         if (myText.equals("")) {
             try {
                 File file = new File("/Users/niladri/Desktop/LaunchCode/java-web-dev-projects/control-flow-and-collections/studio/counting-characters/src/main/java/org/launchcode/readit.txt");
@@ -23,11 +24,7 @@ public class CountChars {
             catch(Exception error) {
                 System.out.println("Error" + error);
             }
-
         }
-
-
-
 
         char[] charactersInString = myText.toCharArray();
 
